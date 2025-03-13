@@ -1,3 +1,11 @@
+    wget https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/zh/zh_CN/huayan/medium/zh_CN-huayan-medium.onnx?download=true
+    wget https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/zh/zh_CN/huayan/medium/zh_CN-huayan-medium.onnx.json?download=true.json
+    wget https://github.com/rhasspy/piper/releases/download/v1.2.0/piper_amd64.tar.gz
+    tar xvf piper_amd64.tar.gz
+    echo "echo '嘿嘿嘿, 你好, 中国人, 起来不愿做奴隶的人们' | ./piper/piper --model zh_CN-huayan-medium.onnx --output_file nihao.wav ; aplay nihao.wav" >   piper.sh
+    chmod 777 piper.sh
+    ./piper.sh
+
 ![Piper logo](etc/logo.png)
 
 A fast, local neural text to speech system that sounds great and is optimized for the Raspberry Pi 4.
